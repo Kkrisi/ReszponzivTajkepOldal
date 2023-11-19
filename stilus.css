@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;  /*width értékbe a padding és a border is beletartozik*/
+    font-family: "Times New Roman", Times, serif;
 }
 main,header,nav,article,section,section>div {
     border: 1px solid gray;
     padding: 10px;
+    display: grid;
+    grid-gap: 3px;
 }
 body {
     width: 90%;
@@ -15,6 +18,7 @@ body {
     background-image: url('kepek/hatter.jpg');
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    padding: 10px;
 }
 header h1 {
     color: black;
@@ -26,22 +30,33 @@ img {
 }
 nav {
     background-color: #d3d3d3;
+    padding: 5px 0px 3px 1px;
 }
 nav ul {
     list-style-type: none;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 10fr 1fr 1fr;
 }
 nav li {
-    
+    text-align: ;
 }
 nav a{
     padding: 5px;
-    color: white;
+    color: #cf0033;
     text-decoration: none;
-    font-size: 10px;
-    border: 1px solid black;
+    font-size: 11px;
+    border-left: 1px solid black;
+    vertical-align: top;
 }
+nav .kezdolapa {
+    background-color: #cf0033;
+    color: white;
+}
+
+
+
+
+
 
 
 article h2 {
@@ -51,14 +66,24 @@ article h2 {
 }
 
 
-article .balint {
+article .keret {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
-}
-article .balint div {
     padding: 3px;
 }
+article .keret div {
+    padding: 3px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -70,14 +95,52 @@ article .balint div {
     body {
       width: 100%;
       font-size: 2vw;
+      padding: 2px;
     }
     main {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 50px auto auto 50px;
     }
-
+    header h1 {
+        padding: 3px 0px 3px 0px;
+        font-size: 21px;
+    }
+    nav {
+        background-color: white;
+        padding: 5px 0px 0px 1px;
+    }
+    nav ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: #d3d3d3;
+    }
+    nav li {
+        border: 1px solid gray;
+        padding: 10px;
+    }
+    nav a {
+        font-size: 110%;
+        border-left: 0px;
+        padding: 0px;
+    }
+    nav .kezdolapli{
+        background-color: #cf0033;
+    }
+    article .keret {
+        grid-template-columns: 1fr;
+        grid-template-rows: 12fr;
+    }
   }
-@media only screen and (max-width: 650px) {
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 400px) {
     body {
         width: 100%;
         font-size: 5vw;
